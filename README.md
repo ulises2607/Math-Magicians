@@ -111,7 +111,7 @@ I would like to thank Microverse for the oportunity given to me to work in this 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/ulises2607/Math-Magicians/blob/develop/LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
