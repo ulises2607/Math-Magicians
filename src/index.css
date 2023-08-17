@@ -1,5 +1,7 @@
 body {
-  padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
 }
 
 #root {
