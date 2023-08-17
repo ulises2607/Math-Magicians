@@ -10,7 +10,7 @@ function DisplayButtons() {
         <CalcButton value="AC" />
         <CalcButton value="+/-" />
         <CalcButton value="%" />
-        <CalcButton className="operation" value="/" />
+        <CalcButton className="operation" value="÷" />
 
         <CalcButton className="number" value={7} />
         <CalcButton className="number" value={8} />
