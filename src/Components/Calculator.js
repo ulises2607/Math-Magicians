@@ -1,10 +1,10 @@
 import React from 'react';
 import DisplayButtons from './buttons';
 
-const Calculator = () => {
-  <>
+function Calculator() {
+  return (
     <DisplayButtons />
-  </>;
-};
+  );
+}
 
 export default Calculator;
