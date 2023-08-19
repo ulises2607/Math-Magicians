@@ -2,27 +2,36 @@ import React, { useState, useEffect } from "react";
 
 function Quotes() {
   const API_KEY = 'PfgoD6eJJrdbX0H0Rpd90w==rNfC856dJmfCqHLG';
-  const [quote, setQuote] = useState({ category: "" }); // Initialize with an empty object
+  const [quote, setQuote] = useState({ category: "" });
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setIsLoading(true)
         const res = await fetch("https://api.api-ninjas.com/v1/quotes?category=learning", {
           method: 'GET',
           headers: {
-            'X-Api-Key': API_KEY, // Remove curly braces around API_KEY
+            'X-Api-Key': API_KEY, 
             'Content-Type': 'application/json',
           },
         });
         const json = await res.json();
-        setQuote(json[0]); // Assuming the API returns an array of quotes, so we take the first one
+        setQuote(json[0]);
+        setIsLoading(false)
       } catch (error) {
         console.error("Error fetching quotes:", error);
+        setIsLoading(false)
       }
     };
     fetchData();
-  }, []); // Empty dependency array to ensure useEffect runs only once
+  }, []); 
 
+  if (isLoading){
+    console.log('que pasa aca');
+    return <div>Loading...</div>
+  }
+  
   return (
     <p> {quote.quote}- {quote.author}</p>
   );
