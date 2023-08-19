@@ -1,0 +1,10 @@
+.input {
+    width: 100%;
+    height: 50px;
+    color: whitesmoke;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+

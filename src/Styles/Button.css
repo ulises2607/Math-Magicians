@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.button-container {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 75px;
+    min-height: 50px;
+    border: 1px lightgrey solid;
+}
+
+.button-container:hover {
+    background-color: orange;
+
+    &&:active {
+        background-color: darkorange;
+        color: white;
+    }
+}
+
+
+
+.operator {
+    background-color: #f5913e;
+}
+
