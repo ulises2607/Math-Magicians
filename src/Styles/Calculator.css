@@ -1,22 +1,21 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .calculator-container {
-    width: 307.1px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+  width: 307.1px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .row {
-    display: flex;
-    flex: 1 1;
+  display: flex;
+  flex: 1 1;
 }
 
 .last {
-    
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
