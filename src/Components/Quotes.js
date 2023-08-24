@@ -38,9 +38,8 @@ function Quotes() {
         <p>Something went wrong! Please verify the connection.</p>
       ) : (
         <>
-          <p>{quote.quote}</p>
-          <span>
-            -
+          <p className="quote">{quote.quote}</p>
+          <span className="quote-author">
             {quote.author}
           </span>
         </>
