@@ -1,0 +1,22 @@
+body {
+  background-image: url('../../Assets/Images/rm373batch13-086.jpg');
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+  color: whitesmoke;
+  padding: 2rem;
+}
+
+.home-article {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}

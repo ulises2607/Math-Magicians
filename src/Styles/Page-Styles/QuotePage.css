@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Article';
+  src: url('../../Assets/Font/DancingScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Author';
+  src: url('../../Assets/Font/BeforeTheRain_personal_use_demo.ttf');
+}
+
+.quote-page-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  background-image: url('../../Assets/Images/paper-2012066.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 1rem;
+}
+
+.quote {
+  font-family: 'Article', sans-serif;
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: end;
+  padding-right: 3rem;
+  font-size: 2rem;
+  font-family: 'Author', sans-serif;
+  font-weight: bold;
+}
