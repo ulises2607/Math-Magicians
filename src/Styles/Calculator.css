@@ -4,15 +4,17 @@
 }
 
 .calculator-container {
-  width: 307.1px;
+  width: 307px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  box-shadow: 10px 14px 16px hsla(27, 85%, 47%, 0.856);
+  border-radius: 20px;
 }
 
 .row {
   display: flex;
-  flex: 1 1;
+  width: fit-content;
 }
 
 .last {

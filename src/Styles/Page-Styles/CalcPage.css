@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.calcTitle {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: whitesmoke;
+}
+
+.calc {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
