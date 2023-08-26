@@ -23,3 +23,19 @@ test('Operation Divide Greater Than Zero', () => {
 test('Operation Divide Lower Than Zero', () => {
   expect(Operate(5, 20, '÷')).toBe('0.25');
 });
+
+test('Division by Zero', () => {
+  expect(Operate(10, 0, '÷')).toBe("Can't divide by 0.");
+});
+
+test('Modulus Operation', () => {
+  expect(Operate(9, 6, '%')).toBe('3');
+});
+
+test('Modulus with Zero', () => {
+  expect(Operate(9, 0, '%')).toBe("Can't find modulo as can't divide by 0.");
+});
+
+test('Unknown Operation', () => {
+  expect(() => Operate(10, 5, '$')).toThrow("Unknown operation '$'");
+});
