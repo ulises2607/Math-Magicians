@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 function Quotes() {
-  // xs1lhvlYhQQTDXI2TUdCeQ==JJgaQ0kspETdrSRz
-  // PfgoD6eJJrdbX0H0Rpd90w==rNfC856dJmfCqHLG
-  const API_KEY = 'xs1lhvlYhQQTDXI2TUdCeQ==JJgaQ0kspETdrSRz';
   const [quote, setQuote] = useState({ category: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(null);
@@ -15,7 +12,7 @@ function Quotes() {
         const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=learning', {
           method: 'GET',
           headers: {
-            'X-Api-Key': API_KEY,
+            'X-Api-Key': process.env.REACT_APP_API_KEY,
             'Content-Type': 'application/json',
           },
         });
