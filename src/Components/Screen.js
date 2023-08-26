@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Screen = ({ input }) => (
 
-  <div className="input">
+  <div className="input" data-testid="screen-element">
     {input.next || input.total || '0'}
   </div>
 );
