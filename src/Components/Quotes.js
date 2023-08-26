@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 function Quotes() {
-  const API_KEY = 'PfgoD6eJJrdbX0H0Rpd90w==rNfC856dJmfCqHLG';
+  //xs1lhvlYhQQTDXI2TUdCeQ==JJgaQ0kspETdrSRz
+  //PfgoD6eJJrdbX0H0Rpd90w==rNfC856dJmfCqHLG
+  const API_KEY = 'xs1lhvlYhQQTDXI2TUdCeQ==JJgaQ0kspETdrSRz';
   const [quote, setQuote] = useState({ category: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(null);
