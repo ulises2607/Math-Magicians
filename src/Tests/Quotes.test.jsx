@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor, screen, toBeInTheDocument } from '@testing-library/react';
+import { render, waitFor, screen } from '@testing-library/react';
 import Quotes from '../Components/Quotes';
 
 describe('Quotes Component', () => {
@@ -7,25 +7,25 @@ describe('Quotes Component', () => {
     jest.resetAllMocks();
   });
 
-  // it('should display loading state', () => {
-  //   render(<Quotes />);
-  //   expect(screen.getByText('Loading...')).toContain('Loading...');
-  // });
+  test('should display loading state', () => {
+    render(<Quotes />);
+    expect(screen.getByText('Loading...').textContent).toBe('Loading...');
+  });
 
-  // it('should display error state', async () => {
-  //   jest.spyOn(global, 'fetch').mockRejectedValue(new Error('API Error'));
+  it('should display error state', async () => {
+    jest.spyOn(global, 'fetch').mockRejectedValue(new Error('API Error'));
 
-  //   render(<Quotes />);
-  //   await waitFor(() => {
-  //     expect(screen.getByText('Something went wrong! Please verify the connection.')).toBeInTheDocument();
-  //   });
-  // });
+    render(<Quotes />);
+    await waitFor(() => {
+      expect(screen.getByText('Something went wrong! Please verify the connection.').textContent).toBe('Something went wrong! Please verify the connection.');
+    });
+  });
 
   it('should display success state', async () => {
     const mockResponse = {
-      category: 'learning',
-      quote: 'Sample quote text',
-      author: 'Sample author',
+      "quote": "Happiness lies neither in vice nor in virtue but in the manner we appreciate the one and the other, and the choice we make pursuant to our individual organization.",
+      "author": "Marquis de Sade",
+      "category": "happiness"
     };
 
     jest.spyOn(global, 'fetch').mockResolvedValue({
@@ -34,7 +34,7 @@ describe('Quotes Component', () => {
 
     render(<Quotes />);
     await waitFor(() => {
-      expect(screen.getByText('Sample quote text')).toBeInTheDocument()
+      expect(screen.getByText("Happiness lies neither in vice nor in virtue but in the manner we appreciate the one and the other, and the choice we make pursuant to our individual organization.")).toBeInTheDocument()
       expect(screen.getByText('Sample author')).toBeInTheDocument();
     });
   });
