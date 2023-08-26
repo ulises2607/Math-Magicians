@@ -4,36 +4,32 @@ import Calculator from '../Components/Calculator';
 
 test('calculator adds input when button ia clicked', () => {
   render(<Calculator />);
-  
+
   const numberButton = screen.getByText('2');
-  
+
   fireEvent.click(numberButton);
 
   const screenElement = screen.getByTestId('screen-element');
-  
+
   // Verifica si ambos contenidos están presentes en el texto del elemento
   expect(screenElement.textContent).toContain('2');
-
 });
 
 test('calculator give multiplication when the user input 2 numbers, the product operator and the equal button', () => {
-    render(<Calculator />);
-    const numberButton = screen.getByText('2');
-    fireEvent.click(numberButton);
+  render(<Calculator />);
+  const numberButton = screen.getByText('2');
+  fireEvent.click(numberButton);
 
-    const product = screen.getByText('x');
-    fireEvent.click(product);
+  const product = screen.getByText('x');
+  fireEvent.click(product);
 
-    const nextNumberButton = screen.getByText('5')
-    fireEvent.click(nextNumberButton)
+  const nextNumberButton = screen.getByText('5');
+  fireEvent.click(nextNumberButton);
 
-    const equal = screen.getByText('=');
-    fireEvent.click(equal)
+  const equal = screen.getByText('=');
+  fireEvent.click(equal);
 
-    const screenElement = screen.getByTestId('screen-element');
+  const screenElement = screen.getByTestId('screen-element');
 
-    expect(screenElement.textContent).toContain('10');
-
-})
-
-
+  expect(screenElement.textContent).toContain('10');
+});

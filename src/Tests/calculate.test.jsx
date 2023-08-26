@@ -32,12 +32,10 @@ describe('calculate function', () => {
     });
   });
 
-
   it('should do nothing on equal button press with no operation and next', () => {
     const result = calculate({ total: null, next: '5', operation: null }, '=');
     expect(result).toEqual({});
   });
-
 
   it('should toggle the sign of total on +/- button press', () => {
     const result = calculate({ total: '10', next: null, operation: null }, '+/-');
@@ -47,5 +45,4 @@ describe('calculate function', () => {
       operation: null,
     });
   });
-
 });

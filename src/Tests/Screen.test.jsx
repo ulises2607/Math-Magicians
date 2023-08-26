@@ -8,7 +8,7 @@ test('correctly renders next with full object', () => {
     next: '10',
     operation: '+',
   };
-  render(<Screen input={myInput}/>)
+  render(<Screen input={myInput} />);
   const result = screen.getByText('10');
   expect(result).toBeTruthy();
 });
@@ -19,7 +19,7 @@ test('correctly renders next with just next assigned', () => {
     next: '10',
     operation: '',
   };
-  render(<Screen input={myInput}/>)
+  render(<Screen input={myInput} />);
   const result = screen.getByText('10');
   expect(result).toBeTruthy();
 });
@@ -30,7 +30,7 @@ test('correctly renders next with just next and operation assigned', () => {
     next: '10',
     operation: '+',
   };
-  render(<Screen input={myInput}/>)
+  render(<Screen input={myInput} />);
   const result = screen.getByText('10');
   expect(result).toBeTruthy();
 });
