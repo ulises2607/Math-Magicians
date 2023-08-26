@@ -1,14 +1,14 @@
 export default fetchQuote = async () => {
   return [
     {
-      category: 'learning',
-      quote: 'Sample quote text 1',
-      author: 'Sample author 1',
+      "quote": "Crying is cleansing. There's a reason for tears, happiness or sadness.",
+      "author": "Dionne Warwick",
+      "category": "happiness"
     },
     {
-      category: 'learning',
-      quote: 'Sample quote text 2',
-      author: 'Sample author 2',
+      "quote": "Happiness lies neither in vice nor in virtue but in the manner we appreciate the one and the other, and the choice we make pursuant to our individual organization.",
+      "author": "Marquis de Sade",
+      "category": "happiness"
     },
   ]
 };
